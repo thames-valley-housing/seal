@@ -22,6 +22,7 @@ common_properties: &common_properties
     - Friday
 
 mtvh-online:
+  name: 'MTVH Online'
   channel: '#slack-bot-testing'
   <<: *common_properties
   repos:
