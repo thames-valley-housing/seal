@@ -35,6 +35,9 @@ private
     return if message.nil?
 
     poster = SlackPoster.new(team.channel, message.mood)
+    puts "Barking in channel '#{team.channel}' with mood '#{message.mood}'"
+    puts
+    puts message.text
     poster.send_request(message.text)
   rescue StandardError => e
     puts "Error barking at team '#{team.name}': #{e.message}"

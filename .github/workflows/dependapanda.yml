@@ -21,4 +21,4 @@ jobs:
           SEAL_ORGANISATION: ${{ vars.SEAL_ORGANISATION }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          DYNO: 1
+          DYNO: '1'
