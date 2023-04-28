@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron:  '30 13 * * 1-5'
+jobs:
+  announce_pull_requests:
+    name: Announce Pull Requests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Install dependencies and run script
+        run: |
+          ./bin/seal_runner.rb mtvh-online
+        env:
+          SEAL_ORGANISATION: ${{ vars.SEAL_ORGANISATION }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
