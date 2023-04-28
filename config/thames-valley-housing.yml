@@ -23,10 +23,9 @@ common_properties: &common_properties
 
 mtvh-online:
   name: 'MTVH Online'
-  channel: '#slack-bot-testing'
+  channel: '#real-devs'
   <<: *common_properties
   repos:
     - mytvh-web
     - mytvh-mid
     - mytvh-pay
-    - mtvh-formio
