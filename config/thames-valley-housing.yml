@@ -23,7 +23,7 @@ common_properties: &common_properties
 
 mtvh-online:
   name: 'MTVH Online'
-  channel: '#real-devs'
+  channel: '#real_devs'
   <<: *common_properties
   repos:
     - mytvh-web
