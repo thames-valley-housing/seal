@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron:  '15 9,13 * * 1-5'
+    - cron:  '0 8 * * 1-5'
 jobs:
   announce_pull_requests:
     name: Announce Pull Requests
