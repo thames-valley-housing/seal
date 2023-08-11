@@ -29,3 +29,4 @@ mtvh-online:
     - mytvh-web
     - mytvh-mid
     - mytvh-pay
+    - clamav-infra
